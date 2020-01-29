@@ -11,7 +11,7 @@
 var fs = require('fs')
 var sevenrules = require('..')
 
-var messagePath = process.env['GIT_PARAMS']
+var messagePath = process.env['GIT_PARAMS'] || process.env['HUSKY_GIT_PARAMS']
 if (!messagePath) {
   throw new Error('Must be run as a husky commit-msg hook')
 }
