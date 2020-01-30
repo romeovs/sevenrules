@@ -22,7 +22,7 @@
   "scripts": {
     "docs": "jsdoc -c .jsdoc.json",
     "lint": "standard --verbose | snazzy",
-    "test": "ava --verbose src/**/*_test.js",
+    "test": "ava --verbose src/**/*_test.js src/*_test.js",
     "build": "rollup -c",
     "prepublish": "rollup -c"
   },
