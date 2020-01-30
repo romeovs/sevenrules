@@ -25,7 +25,7 @@ Inspired by the [quality Bash implementation](https://gitlab.com/silent.correspo
 
 ## Usage
 
-Install husky and the validator:
+Install `husky` and `sevenrules`:
 
 ```sh
 npm install husky --save-dev
@@ -52,8 +52,12 @@ Respect agency. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
-Anybody caught using this work without our permission, will be mighty good friends of ourn, cause we don't give a dern. Study it. Hack it. Publish it, even without naming the source. We made it, that's all we wanted to do.
+Anybody caught using this work without our permission, will be mighty good
+friends of ourn, cause we don't give a dern. Study it. Hack it. Publish it, even
+without naming the source. We made it, that's all we wanted to do.
 
-Released under [the Severn license](LICENSE), an MIT derivative without the notice requirement. Contributor signatures available in the [contributors](https://github.com/severnway/contributors) repository.
+Released under [the Severn license](LICENSE), an MIT derivative without the
+notice requirement. Contributor signatures available in the
+[contributors](https://github.com/severnway/contributors) repository.
 
 NO rights reserved.
