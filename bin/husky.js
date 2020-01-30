@@ -8,15 +8,17 @@
 'use strict'
 
 // Imports
-var fs = require('fs')
-var sevenrules = require('..')
+import fs from 'fs'
+import { validateAll } from '../src/validateAll'
 
 var messagePath = process.env['GIT_PARAMS'] || process.env['HUSKY_GIT_PARAMS']
 if (!messagePath) {
   throw new Error('Must be run as a husky commit-msg hook')
 }
+
 var message = fs.readFileSync(messagePath, 'utf8')
-var results = sevenrules.validateAll(message)
+
+var results = validateAll(message)
 if (!(
   results[1] &&
   results[2] &&
