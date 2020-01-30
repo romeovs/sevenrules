@@ -10,7 +10,7 @@
     "Romeo Van Snick <romeovs@gmail.com>"
   ],
   "bin": {
-    "sevenruleshusky": "bin/husky.js"
+    "sevenrules": "bin/husky.js"
   },
   "directories": {
     "lib": "lib"

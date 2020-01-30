@@ -39,7 +39,7 @@ Hook the validator to `commit-msg` in your `package.json`:
 {
   "husky": {
     "hooks": {
-      "commit-msg": "sevenruleshusky"
+      "commit-msg": "sevenrules"
     }
   }
 }
