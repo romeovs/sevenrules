@@ -12,9 +12,6 @@
 	"bin": {
 		"sevenrules": "dist/husky.js"
 	},
-	"directories": {
-		"lib": "lib"
-	},
 	"files": [
 		"dist/husky.js",
 		"dist/lib.js"
