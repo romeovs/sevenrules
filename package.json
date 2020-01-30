@@ -15,6 +15,10 @@
 	"directories": {
 		"lib": "lib"
 	},
+	"files": [
+		"dist/husky.js",
+		"dist/lib.js"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/romeovs/sevenrules.git"
