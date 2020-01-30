@@ -28,7 +28,8 @@
 	},
 	"husky": {
 		"hooks": {
-			"commit-msg": "node ./dist/husky.js"
+			"commit-msg": "node ./dist/husky.js",
+			"pre-push": "yarn lint"
 		}
 	},
 	"ava": {
