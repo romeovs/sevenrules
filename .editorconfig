@@ -1,38 +1,13 @@
 root = true
 
-; Default
 [*]
-; Unix-style line breaks
-end_of_line = lf
-; End file with line break
-insert_final_newline = true
-; Use UTF-8 encoding
-charset = utf-8
-; Use space characters for indenting
-indent_style = space
-; Each indent is 8 space characters
-indent_size = 8
-; No trailing whitespace on lines
-trim_trailing_whitespace = true
+	charset = utf-8
+	end_of_line = lf
+	insert_final_newline = true
+	trim_trailing_whitespace = true
+	indent_style = tab
+	indent_size = 2
 
-; Markdown
 [*.md]
-; Trailing whitespace is significant
-trim_trailing_whitespace = false
-; Allow precise line control
-insert_final_newline = false
-
-; HTML
-[*.{htm,html}]
-; Each indent is 2 space characters
-indent_size = 2
-
-; JavaScript
-[*.js]
-; Each indent is 2 space characters
-indent_size = 2
-
-; JSON
-[*.json]
-; Each indent is 2 space characters
-indent_size = 2
+	trim_trailing_whitespace = false
+	indent_style = space
