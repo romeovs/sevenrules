@@ -62,7 +62,7 @@ package-lock.json
 yarn.lock
 
 # Generated documentation
-/apidoc
+docs/
 
 # Build directory
 dist/

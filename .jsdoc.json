@@ -1,13 +1,13 @@
 {
   "opts": {
-    "destination": "apidoc/js",
+    "destination": "docs",
     "recurse": true,
     "pedantic": true,
     "verbose": true
   },
   "source": {
     "include": [
-      "lib"
+      "src"
     ]
   }
 }
