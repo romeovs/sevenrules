@@ -1,6 +1,6 @@
 import test from 'ava'
 import sinon from 'sinon'
-import { validate } from './validate'
+import { validate, validateAll } from './validate'
 
 // Dummy message
 const message = 'Message'
@@ -31,4 +31,32 @@ test.serial('all rules satisfied passes', function (t) {
   foo.returns(true)
   bar.returns(true)
   t.true(validate(message, rules))
+})
+
+test.serial('rule foo pass reported', function (t) {
+  foo.returns(true)
+  bar.returns(true)
+  const results = validateAll(message, rules)
+  t.true(results.foo)
+})
+
+test.serial('rule foo pass reported', function (t) {
+  foo.returns(false)
+  bar.returns(true)
+  const results = validateAll(message, rules)
+  t.false(results.foo)
+})
+
+test.serial('rule bar pass reported', function (t) {
+  foo.returns(true)
+  bar.returns(true)
+  const results = validateAll(message, rules)
+  t.true(results.bar)
+})
+
+test.serial('rule bar pass reported', function (t) {
+  foo.returns(true)
+  bar.returns(false)
+  const results = validateAll(message, rules)
+  t.false(results.bar)
 })
