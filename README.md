@@ -6,21 +6,28 @@ Validates a git commit message against [The seven rules](https://chris.beams.io/
 1. **Limit the subject line to 72 characters**
 1. **Capitalize the subject line**
 1. **Do not end the subject line with a period**
-1. Use the imperative mood in the subject line
+1. **Use the imperative mood in the subject line**
 1. **Wrap the body at 72 characters**
 1. Use the body to explain what and why vs. how
 
-The bolded rules 1-4 and 6 are checked. The remaining 2 are not detectable programmatically. The title of [rule 2](https://chris.beams.io/posts/git-commit/#limit-50) says 50 characters but the body clarifies 72 is the hard limit.
+The bolded rules 1-6 are checked. The remaining rule 7 is not detectable programmatically.
 
-Provides a [husky](https://github.com/typicode/husky) hook for easy use.
+Rule 5 (Imperative mood) is heuristically checked using a blacklist of terms,
+but might give false negatives in some cases. The blacklist is based on [this
+git hook](https://github.com/tommarshall/git-good-commit).
 
-Inspired by the [quality Bash implementation](https://gitlab.com/silent.correspondent/commit-msg/blob/master/commit-msg.sh) by Silent Correspondent.
+The title of [rule 2](https://chris.beams.io/posts/git-commit/#limit-50) says 50
+characters but the body clarifies 72 is the hard limit.
+
+A [husky](https://github.com/typicode/husky) hook is provided for ease of use.
+
+Inspired by the [quality Bash implementation](https://gitlab.com/silent.correspondent/commit-msg/blob/master/commit-msg.sh).
 
 ## Usage
 
 Install husky and the validator:
 
-```Shell
+```sh
 npm install husky --save-dev
 npm install sevenrules --save-dev
 ```
