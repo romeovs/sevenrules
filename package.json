@@ -29,7 +29,7 @@
     "localtest": "npm-run-all unittest",
     "test": "npm run localtest",
     "unittest": "npm-run-all unittestjs",
-    "unittestjs": "ava --verbose test/unit"
+    "unittestjs": "ava --verbose lib/**/*_test.js"
   },
   "devDependencies": {
     "ava": "0",
