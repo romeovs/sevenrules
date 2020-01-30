@@ -1,12 +1,12 @@
 import test from 'ava'
-const rule2 = require('./rule2')
+import { rule2 } from './rule2'
 
 function accept (t, message) {
-  t.true(rule2.validate(message))
+  t.true(rule2(message))
 }
 
 function reject (t, message) {
-  t.false(rule2.validate(message))
+  t.false(rule2(message))
 }
 
 test('accept under 50 chars', accept, 'X'.repeat(20))

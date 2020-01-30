@@ -1,12 +1,12 @@
 import test from 'ava'
-const rule4 = require('./rule4')
+import { rule4 } from './rule4'
 
 function accept (t, message) {
-  t.true(rule4.validate(message))
+  t.true(rule4(message))
 }
 
 function reject (t, message) {
-  t.false(rule4.validate(message))
+  t.false(rule4(message))
 }
 
 test('accept unterminated subject', accept, 'Subject')

@@ -1,12 +1,12 @@
 import test from 'ava'
-const rule1 = require('./rule5')
+import { rule5 } from './rule5'
 
 function accept (t, message) {
-  t.true(rule1.validate(message))
+  t.true(rule5(message))
 }
 
 function reject (t, message) {
-  t.false(rule1.validate(message))
+  t.false(rule5(message))
 }
 
 test('accept valid imperative tone', accept, 'Add test for foo')

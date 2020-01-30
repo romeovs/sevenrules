@@ -1,5 +1,5 @@
 import test from 'ava'
-const lines = require('./lines')
+import { lines } from './lines'
 
 test('lines splits message at CR', function (t) {
   t.deepEqual(lines('Foo\u{D}Bar'), [ 'Foo', 'Bar' ])

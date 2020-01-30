@@ -1,12 +1,12 @@
 import test from 'ava'
-const rule6 = require('./rule6')
+import { rule6 } from './rule6'
 
 function accept (t, message) {
-  t.true(rule6.validate(message))
+  t.true(rule6(message))
 }
 
 function reject (t, message) {
-  t.false(rule6.validate(message))
+  t.false(rule6(message))
 }
 
 test('accept wrap under 72 chars', accept,

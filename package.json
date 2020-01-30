@@ -22,7 +22,7 @@
   "scripts": {
     "docs": "jsdoc -c .jsdoc.json",
     "lint": "standard --verbose | snazzy",
-    "test": "ava --verbose lib/**/*_test.js",
+    "test": "ava --verbose src/**/*_test.js",
     "build": "rollup -c"
   },
   "husky": {
@@ -30,8 +30,14 @@
       "commit-msg": "node ./dist/husky.js"
     }
   },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
   "devDependencies": {
     "ava": "0",
+    "esm": "^3.2.25",
     "husky": "^4.2.1",
     "jsdoc": "3",
     "mock-require": "2",

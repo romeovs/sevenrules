@@ -1,12 +1,12 @@
 import test from 'ava'
-const rule3 = require('./rule3')
+import { rule3 } from './rule3'
 
 function accept (t, message) {
-  t.true(rule3.validate(message))
+  t.true(rule3(message))
 }
 
 function reject (t, message) {
-  t.false(rule3.validate(message))
+  t.false(rule3(message))
 }
 
 test('accept capitalized subject', accept, 'Subject')

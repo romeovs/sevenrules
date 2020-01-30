@@ -1,12 +1,12 @@
 import test from 'ava'
-const rule1 = require('./rule1')
+import { rule1 } from './rule1'
 
 function accept (t, message) {
-  t.true(rule1.validate(message))
+  t.true(rule1(message))
 }
 
 function reject (t, message) {
-  t.false(rule1.validate(message))
+  t.false(rule1(message))
 }
 
 test('accept no body', accept, 'Subject line')
