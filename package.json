@@ -4,11 +4,12 @@
 	"description": "Git commit message validator",
 	"homepage": "https://github.com/romeovs/sevenrules",
 	"bugs": "https://github.com/severnway/romeovs/issues",
+	"repository": "git:https://github.com/romeovs/sevenrules.git",
 	"license": "SEE LICENSE IN LICENSE",
-	"main": "dist/lib.js",
 	"authors": [
 		"Romeo Van Snick <romeovs@gmail.com>"
 	],
+	"main": "dist/lib.js",
 	"bin": {
 		"sevenrules": "dist/husky.js"
 	},
@@ -16,10 +17,6 @@
 		"dist/husky.js",
 		"dist/lib.js"
 	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/romeovs/sevenrules.git"
-	},
 	"scripts": {
 		"docs": "jsdoc -c .jsdoc.json",
 		"lint": "eslint src *.js",
