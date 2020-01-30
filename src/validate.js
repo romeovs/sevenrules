@@ -10,6 +10,8 @@ import { rule4 } from "./rules/rule4"
 import { rule5 } from "./rules/rule5"
 import { rule6 } from "./rules/rule6"
 
+import { special } from "./special"
+
 /**
  * Validation results.
  * @typedef {object} results
@@ -51,6 +53,10 @@ const all = {
  * @return {results} - Validation results for all rules.
  */
 export function validateAll (message, rules = all) {
+	if (special(message)) {
+		return {}
+	}
+
 	const res = {}
 	for (const key in rules) {
 		res[key] =

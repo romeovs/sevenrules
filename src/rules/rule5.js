@@ -6,7 +6,6 @@
 import { lines as split } from "../lines"
 import { words } from "../words"
 import { blacklist } from "../blacklist"
-import { exceptions } from "../exceptions"
 
 /**
  * Validate a commit message against rule 5.
@@ -20,11 +19,6 @@ export function rule5 (message) {
 	const [ subject ] = split(message)
 	const [ first ] = words(subject)
 	const lower = first.toLowerCase()
-
-	if (exceptions.includes(lower)) {
-		// Ignore special commit messages
-		return true
-	}
 
 	if (blacklist.includes(lower)) {
 		// If the word is on the blacklist, it's not in the imperative mood
