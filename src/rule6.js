@@ -5,12 +5,10 @@
 
 'use strict'
 
-// Imports
-var splitLines = require('./lines')
+import { lines as split } from './lines'
 
 /** The text of the rule. */
-exports.rule =
-  'Wrap the body at 72 characters'
+export const text = 'Wrap the body at 72 characters'
 
 /**
  * Validate a commit message against rule 6.
@@ -20,8 +18,8 @@ exports.rule =
  * @param {string} message - The commit message.
  * @return {boolean} - true if message satisfies rule 6.
  */
-exports.validate = function validate (message) {
-  var lines = splitLines(message)
+export function rule6 (message) {
+  var lines = split(message)
   for (var i = 2; i < lines.length; i++) {
     if (lines[i].length > 72) return false
   }

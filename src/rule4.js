@@ -5,7 +5,7 @@
 
 'use strict'
 
-var splitLines = require('./lines')
+import { lines as split } from './lines'
 
 
 /**
@@ -15,8 +15,7 @@ var splitLines = require('./lines')
 var period = /\./
 
 /** The text of the rule. */
-exports.rule =
-  'Do not end the subject line with a period'
+export const text = 'Do not end the subject line with a period'
 
 /**
  * Validate a commit message against rule 4.
@@ -26,8 +25,8 @@ exports.rule =
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 4.
  */
-exports.validate = function validate (message) {
-  var lines = splitLines(message)
+export function rule4 (message) {
+  var lines = split(message)
   var subject = lines[0]
   var lastCharacter = subject.charAt(subject.length - 1)
   var match = lastCharacter.match(period)

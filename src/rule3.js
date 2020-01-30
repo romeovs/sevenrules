@@ -12,8 +12,7 @@
 var capitalLetter = /[A-Z]/
 
 /** Text of the rule. */
-exports.rule =
-  'Capitalize the subject line'
+export const text = 'Capitalize the subject line'
 
 /**
  * Validate a commit message against rule 3.
@@ -23,7 +22,7 @@ exports.rule =
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 3.
  */
-exports.validate = function validate (message) {
+export function rule3 (message) {
   if (message.length === 0) return false
   var firstCharacter = message.charAt(0)
   var match = firstCharacter.match(capitalLetter)

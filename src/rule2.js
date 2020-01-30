@@ -5,12 +5,10 @@
 
 'use strict'
 
-// Imports
-var splitLines = require('./lines')
+import { lines as split } from './lines'
 
 /** Text of the rule. */
-exports.rule =
-  'Limit the subject line to 72 characters'
+export const text = 'Limit the subject line to 72 characters'
 
 /**
  * Validate a commit message against rule 2.
@@ -20,8 +18,8 @@ exports.rule =
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 2.
  */
-exports.validate = function validate (message) {
-  var lines = splitLines(message)
+export function rule2 (message) {
+  var lines = split(message)
   var subject = lines[0]
   if (subject.length > 72) return false
   return true

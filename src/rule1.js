@@ -3,14 +3,11 @@
  * @module sevenrules/rule1
  */
 
-'use strict'
-
 // Imports
-var splitLines = require('./lines')
+import { lines as split } from './lines'
 
 /** Text of the rule. */
-exports.rule =
-  'Separate subject from body with a blank line'
+export const text = 'Separate subject from body with a blank line'
 
 /**
  * Validate a commit message against rule 1.
@@ -20,8 +17,8 @@ exports.rule =
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 1.
  */
-exports.validate = function validate (message) {
-  var lines = splitLines(message)
+export function rule1 (message) {
+  var lines = split(message)
   if (lines.length < 2) return true
   if (lines[1].length > 0) return false
   return true

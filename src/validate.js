@@ -5,7 +5,7 @@
 
 'use strict'
 
-var validateAll = require('./validateAll.js')
+import { validateAll } from './validateAll.js'
 
 /**
  * Validate a commit message with simple result.
@@ -13,7 +13,7 @@ var validateAll = require('./validateAll.js')
  * @return {boolean}
  *     Whether the message satisfies all rules.
  */
-module.exports = function validate (message) {
+export function validate (message) {
   const results = validateAll(message)
   return Object.values(results).every(res => res)
 }

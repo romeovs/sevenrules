@@ -5,7 +5,7 @@
   "homepage": "https://github.com/romeovs/sevenrules",
   "bugs": "https://github.com/severnway/romeovs/issues",
   "license": "SEE LICENSE IN LICENSE",
-  "main": "lib/index",
+  "main": "dist/lib.js",
   "authors": [
     "Romeo Van Snick <romeovs@gmail.com>"
   ],
@@ -22,7 +22,8 @@
   "scripts": {
     "docs": "jsdoc -c .jsdoc.json",
     "lint": "standard --verbose | snazzy",
-    "test": "ava --verbose lib/**/*_test.js"
+    "test": "ava --verbose lib/**/*_test.js",
+    "build": "rollup -c"
   },
   "husky": {
     "hooks": {

@@ -5,13 +5,11 @@
 
 'use strict'
 
-// Imports
-var splitLines = require('./lines')
-var blacklist = require('./blacklist')
+import { lines as split } from './lines'
+import { blacklist } from './blacklist'
 
 /** Text of the rule. */
-exports.rule =
-  'Use the imperative mood in the subject line'
+export const text = 'Use the imperative mood in the subject line'
 
 
 /**
@@ -22,8 +20,8 @@ exports.rule =
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 5.
  */
-exports.validate = function validate (message) {
-  var line = splitLines(message)[0]
+export function rule5 (message) {
+  var line = split(message)[0]
   var first = line.split(/\s+/).filter(s => s !== '')[0]
 
   if (blacklist.indexOf(first.toLowerCase()) !== -1) {

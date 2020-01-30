@@ -1,5 +1,5 @@
 // blacklist taken from https://github.com/tommarshall/git-good-commit
-module.exports = [
+export const blacklist = [
   'added',
   'adding',
   'adds',
