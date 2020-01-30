@@ -15,23 +15,17 @@ import { special } from "./special"
 /**
  * Validation results.
  * @typedef {object} results
- * @prop {boolean} 1 - Whether the message satisfies rule 1.
- * @prop {boolean} 2 - Whether the message satisfies rule 2.
- * @prop {boolean} 3 - Whether the message satisfies rule 3.
- * @prop {boolean} 4 - Whether the message satisfies rule 4.
- * @prop {boolean} 5 - Whether the message satisfies rule 5.
- * @prop {boolean} 6 - Whether the message satisfies rule 6.
+ * @prop {string | null} 1 - Null if the message adheres to rule 1, a string with the error otherwise
+ * @prop {string | null} 2 - Null if the message adheres to rule 2, a string with the error otherwise
+ * @prop {string | null} 3 - Null if the message adheres to rule 3, a string with the error otherwise
+ * @prop {string | null} 4 - Null if the message adheres to rule 4, a string with the error otherwise
+ * @prop {string | null} 5 - Null if the message adheres to rule 5, a string with the error otherwise
+ * @prop {string | null} 6 - Null if the message adheres to rule 6, a string with the error otherwise
  */
 
 /**
  * Rules dict.
  * @typedef {object} rules
- * @prop {boolean} 1 - Whether the message satisfies rule 1.
- * @prop {boolean} 2 - Whether the message satisfies rule 2.
- * @prop {boolean} 3 - Whether the message satisfies rule 3.
- * @prop {boolean} 4 - Whether the message satisfies rule 4.
- * @prop {boolean} 5 - Whether the message satisfies rule 5.
- * @prop {boolean} 6 - Whether the message satisfies rule 6.
  */
 
 /**

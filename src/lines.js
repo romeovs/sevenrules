@@ -1,5 +1,3 @@
-const lineBreak = /\r\n|[\r\n]/
-
 /**
  * Split the message up in lines.
  *
@@ -7,5 +5,5 @@ const lineBreak = /\r\n|[\r\n]/
  * @return {string[]} - The lines of the message.
  */
 export function lines (message) {
-	return message.split(lineBreak)
+	return message.split(/\r\n|[\r\n]/)
 }
