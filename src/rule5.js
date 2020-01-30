@@ -3,8 +3,6 @@
  * @module sevenrules/rule5
  */
 
-'use strict'
-
 import { lines as split } from './lines'
 import { blacklist } from './blacklist'
 

@@ -1,5 +1,3 @@
-'use strict'
-
 var lineBreak = /\r\n|[\r\n]/
 
 /**

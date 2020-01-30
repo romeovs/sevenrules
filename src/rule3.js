@@ -3,8 +3,6 @@
  * @module sevenrules/rule3
  */
 
-'use strict'
-
 /**
  * Capital letter. Currently naive.
  * @todo Use the correct means for Unicode text.

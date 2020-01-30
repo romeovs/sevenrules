@@ -3,8 +3,6 @@
  * @module sevenrules/validateAll
  */
 
-'use strict'
-
 import { rule1 } from './rule1'
 import { rule2 } from './rule2'
 import { rule3 } from './rule3'

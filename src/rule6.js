@@ -3,8 +3,6 @@
  * @module sevenrules/rule6
  */
 
-'use strict'
-
 import { lines as split } from './lines'
 
 /** The text of the rule. */
