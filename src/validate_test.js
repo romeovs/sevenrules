@@ -27,6 +27,13 @@ test.serial("rule bar violation fails", function (t) {
 	t.false(validate(message, rules))
 })
 
+test.serial("validate ignores special commit messages", function (t) {
+	foo.returns(false)
+	bar.returns(false)
+	t.true(validate("fixup! Foo", rules))
+	t.true(validate("v1.2.3", rules))
+})
+
 test.serial("all rules satisfied passes", function (t) {
 	foo.returns(true)
 	bar.returns(true)
@@ -60,3 +67,4 @@ test.serial("rule bar pass reported", function (t) {
 	const results = validateAll(message, rules)
 	t.truthy(results.bar)
 })
+

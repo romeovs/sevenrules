@@ -8,6 +8,9 @@ test("special accepts fixup commits", function (t) {
 test("special accepts version commits", function (t) {
 	t.true(special("v0.1.2"))
 	t.true(special("v12.3.4"))
+	t.true(special("v12.3.4 "))
+	t.true(special("v12.3.4\n"))
+	t.true(special("v12.3.4\n\n"))
 })
 
 test("special rejects other commits", function (t) {

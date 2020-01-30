@@ -3,7 +3,7 @@ const matchers = {
 		return message.toLowerCase().startsWith("fixup!")
 	},
 	version (message) {
-		return message.match(/^v\d+\.\d+\.\d+$/)
+		return message.trim().match(/^v\d+\.\d+\.\d+$/)
 	},
 }
 
