@@ -24,6 +24,11 @@
     "lint": "standard --verbose | snazzy",
     "test": "ava --verbose lib/**/*_test.js"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node ./bin/husky.js"
+    }
+  },
   "devDependencies": {
     "ava": "0",
     "husky": "^4.2.1",
