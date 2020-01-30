@@ -3,8 +3,8 @@
  * @module sevenrules/rule5
  */
 
-import { lines as split } from './lines'
-import { blacklist } from './blacklist'
+import { lines as split } from '../lines'
+import { blacklist } from '../blacklist'
 
 
 /**

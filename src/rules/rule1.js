@@ -4,7 +4,7 @@
  */
 
 // Imports
-import { lines as split } from './lines'
+import { lines as split } from '../lines'
 
 /**
  * Validate a commit message against rule 1.

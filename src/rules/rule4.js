@@ -3,7 +3,7 @@
  * @module sevenrules/rule4
  */
 
-import { lines as split } from './lines'
+import { lines as split } from '../lines'
 
 
 /**

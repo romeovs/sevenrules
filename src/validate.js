@@ -3,12 +3,12 @@
  * @module sevenrules/validate
  */
 
-import { rule1 } from './rule1'
-import { rule2 } from './rule2'
-import { rule3 } from './rule3'
-import { rule4 } from './rule4'
-import { rule5 } from './rule5'
-import { rule6 } from './rule6'
+import { rule1 } from './rules/rule1'
+import { rule2 } from './rules/rule2'
+import { rule3 } from './rules/rule3'
+import { rule4 } from './rules/rule4'
+import { rule5 } from './rules/rule5'
+import { rule6 } from './rules/rule6'
 
 /**
  * Validation results.

@@ -3,7 +3,7 @@
  * @module sevenrules/rule6
  */
 
-import { lines as split } from './lines'
+import { lines as split } from '../lines'
 
 /**
  * Validate a commit message against rule 6.
