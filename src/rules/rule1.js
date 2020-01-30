@@ -9,7 +9,7 @@ import { lines as split } from "../lines"
 /**
  * Validate a commit message against rule 1.
  *
- *   Rule 1: Separate subject from body with a blank line
+ *	 Rule 1: Separate subject from body with a blank line
  *
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 1.

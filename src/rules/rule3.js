@@ -14,7 +14,7 @@ const capitalLetter = /[A-Z]/
 /**
  * Validate a commit message against rule 3.
  *
- *   Rule 3: Capitalize the subject line
+ *	 Rule 3: Capitalize the subject line
  *
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 3.

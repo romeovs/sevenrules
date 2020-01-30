@@ -15,7 +15,7 @@ const period = /\./
 /**
  * Validate a commit message against rule 4.
  *
- *   Rule 4: Do not end the subject line with a period
+ *	 Rule 4: Do not end the subject line with a period
  *
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 4.

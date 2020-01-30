@@ -10,7 +10,7 @@ import { exceptions } from "../exceptions"
 /**
  * Validate a commit message against rule 5.
  *
- *   Rule 5: Use the imperative mood in the subject line
+ *	 Rule 5: Use the imperative mood in the subject line
  *
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 5.

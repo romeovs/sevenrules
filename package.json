@@ -1,51 +1,51 @@
 {
-  "name": "@romeovs/sevenrules",
-  "version": "1.4.0",
-  "description": "Git commit message validator",
-  "homepage": "https://github.com/romeovs/sevenrules",
-  "bugs": "https://github.com/severnway/romeovs/issues",
-  "license": "SEE LICENSE IN LICENSE",
-  "main": "dist/lib.js",
-  "authors": [
-    "Romeo Van Snick <romeovs@gmail.com>"
-  ],
-  "bin": {
-    "sevenrules": "dist/husky.js"
-  },
-  "directories": {
-    "lib": "lib"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/romeovs/sevenrules.git"
-  },
-  "scripts": {
-    "docs": "jsdoc -c .jsdoc.json",
-    "lint": "eslint src",
-    "test": "ava --verbose src/**/*_test.js src/*_test.js",
-    "build": "rollup -c",
-    "prepublish": "rollup -c"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "node ./dist/husky.js"
-    }
-  },
-  "ava": {
-    "require": [
-      "esm"
-    ]
-  },
-  "devDependencies": {
-    "ava": "0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "esm": "^3.2.25",
-    "husky": "^4.2.1",
-    "jsdoc": "3",
-    "rollup": "^1.30.1",
-    "rollup-plugin-hashbang": "^2.2.2",
-    "sinon": "4"
-  }
+	"name": "@romeovs/sevenrules",
+	"version": "1.4.0",
+	"description": "Git commit message validator",
+	"homepage": "https://github.com/romeovs/sevenrules",
+	"bugs": "https://github.com/severnway/romeovs/issues",
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "dist/lib.js",
+	"authors": [
+		"Romeo Van Snick <romeovs@gmail.com>"
+	],
+	"bin": {
+		"sevenrules": "dist/husky.js"
+	},
+	"directories": {
+		"lib": "lib"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/romeovs/sevenrules.git"
+	},
+	"scripts": {
+		"docs": "jsdoc -c .jsdoc.json",
+		"lint": "eslint src",
+		"test": "ava --verbose src/**/*_test.js src/*_test.js",
+		"build": "rollup -c",
+		"prepublish": "rollup -c"
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "node ./dist/husky.js"
+		}
+	},
+	"ava": {
+		"require": [
+			"esm"
+		]
+	},
+	"devDependencies": {
+		"ava": "0",
+		"babel-eslint": "^10.0.3",
+		"eslint": "^6.8.0",
+		"eslint-plugin-babel": "^5.3.0",
+		"esm": "^3.2.25",
+		"husky": "^4.2.1",
+		"jsdoc": "3",
+		"rollup": "^1.30.1",
+		"rollup-plugin-hashbang": "^2.2.2",
+		"sinon": "4"
+	}
 }

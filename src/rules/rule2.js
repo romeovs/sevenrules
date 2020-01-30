@@ -8,7 +8,7 @@ import { lines as split } from "../lines"
 /**
  * Validate a commit message against rule 2.
  *
- *   Rule 2: Limit the subject line to 72 characters.
+ *	 Rule 2: Limit the subject line to 72 characters.
  *
  * @param {string} message - The commit message.
  * @return {boolean} - true if the message satisfies rule 2.

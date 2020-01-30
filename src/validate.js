@@ -54,9 +54,9 @@ export function validateAll (message, rules = all) {
 	const res = {}
 	for (const key in rules) {
 		res[key] =
-      rules[key](message)
-      	? null
-      	: rules[key].text || `rule ${key} failed`
+			rules[key](message)
+				? null
+				: rules[key].text || `rule ${key} failed`
 	}
 
 	return res

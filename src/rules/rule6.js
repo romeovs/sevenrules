@@ -8,7 +8,7 @@ import { lines as split } from "../lines"
 /**
  * Validate a commit message against rule 6.
  *
- *   Rule 6: Wrap the body at 72 characters
+ *	 Rule 6: Wrap the body at 72 characters
  *
  * @param {string} message - The commit message.
  * @return {boolean} - true if message satisfies rule 6.
