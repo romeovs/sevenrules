@@ -1,0 +1,1236 @@
+root: true
+
+parser: babel-eslint
+
+env:
+  node: true
+  es6: true
+
+plugins:
+  - babel
+
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+  ecmaFeatures:
+    impliedStrict: true
+    globalReturn: false
+
+rules:
+  # Enforces getter/setter pairs in objects
+  accessor-pairs:
+    - warn
+
+  # Enforce line breaks after opening and before closing array brackets
+  array-bracket-newline:
+    - error
+    - consistent
+    # - multiline: true
+
+  # Handles destructuring arrays with flow type in function parameters
+  array-bracket-spacing:
+    - error
+    - always
+    - arraysInArrays: false
+      objectsInArrays: false
+
+  # Enforce return statements in callbacks of array’s methods
+  array-callback-return:
+    - error
+
+  # Enforce line breaks between array elements
+  array-element-newline:
+    - off
+
+  # Consistent arrow bodies
+  arrow-body-style:
+    - error
+    - never
+
+  # Force parentheses only when needed in arrow functions
+  arrow-parens:
+    - error
+    - as-needed
+
+  # Force arrow bodies to be simple
+  arrow-spacing:
+    - error
+
+  # deprecated
+  babel/array-bracket-spacing:
+    - off
+
+  # deprecated
+  babel/arrow-parens:
+    - off
+
+  # Require camelcase
+  babel/camelcase:
+    - off
+
+  # deprecated
+  babel/flow-object-type:
+    - off
+
+  # deprecated
+  babel/func-params-comma-dangle:
+    - off
+
+  # deprecated
+  babel/generator-star-spacing:
+    - off
+
+  # Correct spacing inside objects
+  babel/object-curly-spacing:
+    - error
+    - always
+    - arraysInObjects: false
+      objectsInObjects: false
+
+  # deprecated
+  babel/object-shorthand:
+    - off
+
+  # Enforce quote style
+  babel/quotes:
+    - error
+    - double
+    - avoidEscape: true
+      allowTemplateLiterals: true
+
+  # Require constructor names to begin with a capital letter
+  babel/new-cap:
+    - off
+
+  # deprecated
+  babel/no-await-in-loop:
+    - off
+
+  # Disallow invalid this references
+  babel/no-invalid-this:
+    - error
+
+  # Disallow unused expressions
+  babel/no-unused-expressions:
+    - error
+
+  # Disallow use of semicolons
+  babel/semi:
+    - error
+    - never
+
+  # Ensure string compared to typeof is valid
+  babel/valid-typeof:
+    - error
+
+  # Treat var as Block Scoped
+  block-scoped-var:
+    - off
+
+  # Force spacing in single line blocks
+  block-spacing:
+    - error
+    - always
+
+  # Force the one true brace style
+  brace-style:
+    - error
+    - 1tbs
+
+  # Enforce Return After Callback
+  callback-return:
+    - warn
+
+  # Do not force camel-case
+  camelcase:
+    - off
+
+  # Enforce or disallow capitalization of the first letter of a comment
+  capitalized-comments:
+    - off
+
+  # Enforce that class methods utilize this
+  class-methods-use-this:
+    - off
+
+  # Force dangling commas
+  comma-dangle:
+    - error
+    - always-multiline
+
+  # Enforce spacing and after comma
+  comma-spacing:
+    - error
+
+  # Enforce one true comma style
+  comma-style:
+    - error
+    - last
+
+  # Limit Cyclomatic Complexity
+  complexity:
+    - warn
+
+  # Require or disallow padding inside computed properties
+  computed-property-spacing:
+    - error
+
+  # Require return statements to either always or never specify values
+  consistent-return:
+    - error
+
+  # Require Consistent This
+  consistent-this:
+    - warn
+
+  # Verify calls of super() in constructors
+  constructor-super:
+    - error
+
+  # Specify curly brace conventions for all control statements
+  curly:
+    - error
+    - all
+
+  # Require Default Case in Switch Statements
+  default-case:
+    - off
+
+  # Enforce consistent newlines before or after dots
+  dot-location:
+    - error
+    - property
+
+  # Encourage use of dot notation whenever possible
+  dot-notation:
+    - error
+
+  # Require a newline at the end of files
+  eol-last:
+    - error
+    - always
+
+  # Require use of === and !==
+  eqeqeq:
+    - error
+
+  # Enforce “for” loop update clause moving the counter in the right direction
+  for-direction:
+    - off
+
+  # Force consistent spacing when calling functions
+  func-call-spacing:
+    - error
+    - never
+
+  # Require function names to match the name of the variable or property to which they are assigned
+  func-name-matching:
+    - warn
+
+  # Disallow named function expressions
+  func-names:
+    - off
+
+  # Force expression-style function declarations.
+  func-style:
+    - error
+    - declaration
+    - allowArrowFunctions: true
+
+  # Enforce consistent line breaks inside function parentheses
+  function-paren-newline:
+    - error
+    - consistent
+
+  # Force space around generator stars
+  generator-star-spacing:
+    - error
+    - both
+
+  # Enforces that a return statement is present in property getters
+  getter-return:
+    - warn
+
+  # Enforce require() on the top-level module scope
+  global-require:
+    - warn
+
+  # Require Guarding for-in
+  guard-for-in:
+    - off
+
+  # Enforce callback error handling
+  handle-callback-err:
+    - warn
+
+  # Disallow specified identifiers
+  id-blacklist:
+    - off
+
+  # Enforce minimum and maximum identifier lengths
+  id-length:
+    - off
+
+  # Require identifiers to match a specified regular expression
+  id-match:
+    - off
+
+  # Enforce the location of arrow function bodies with implicit returns
+  implicit-arrow-linebreak:
+    - error
+    - beside
+
+  # Enforce consistent indentation
+  indent:
+    - error
+    - tab
+    - SwitchCase: 0
+      MemberExpression: 1
+
+  # Legacy rule
+  indent-legacy:
+    - off
+
+  # Require or disallow initialization in variable declarations
+  init-declarations:
+    - error
+    - always
+
+  # Use double quotes in jsx
+  jsx-quotes:
+    - error
+    - prefer-double
+
+  # Consistent object key spacing
+  key-spacing:
+    - error
+    - beforeColon: false
+      afterColon: true
+      mode: strict
+
+  # Enforce spacing before and after keywords
+  keyword-spacing:
+    - error
+
+  # Enforce position of line comments
+  line-comment-position:
+    - warn
+    - above
+
+  # Enforce consistent linebreak style
+  linebreak-style:
+    - error
+    - unix
+
+  # Require empty lines around comments
+  lines-around-comment:
+    - off
+
+  # Require or disallow newlines around directives
+  lines-around-directive:
+    - off
+
+  # Require or disallow an empty line between class members
+  lines-between-class-members:
+    - off
+
+  # Enforce a maximum number of classes per file
+  max-classes-per-file:
+    - off
+
+  # Enforce a maximum depth that blocks can be nested
+  max-depth:
+    - warn
+    - max: 4
+
+  # Enforce a maximum line length
+  max-len:
+    - off
+
+  # Enforce a maximum file length
+  max-lines:
+    - off
+
+  # Enforce a maximum function length
+  max-lines-per-function:
+    - off
+
+  # Enforce a maximum depth that callbacks can be nested
+  max-nested-callbacks:
+    - warn
+    - max: 4
+
+  # Enforce a maximum number of parameters in function definitions
+  max-params:
+    - warn
+    - max: 5
+
+  # Enforce a maximum number of statements allowed per line
+  max-statements-per-line:
+    - warn
+    - max: 1
+
+  # Enforce a maximum number of statements allowed in function blocks
+  max-statements:
+    - off
+
+  # Enforce a particular style for multiline comments
+  multiline-comment-style:
+    - error
+    - separate-lines
+
+  # Enforce or disallow newlines between operands of ternary expressions
+  multiline-ternary:
+    - off
+
+  # Require constructor names to begin with a capital letter
+  new-cap:
+    - off # (see babel/new-cap)
+
+  # Require parentheses when invoking a constructor with no arguments
+  new-parens:
+    - error
+
+  # Require or disallow an empty line after variable declaration
+  newline-after-var:
+    - off
+
+  # Require an empty line before return statements
+  newline-before-return:
+    - off
+
+  # Require a newline after each call in a method chain
+  newline-per-chained-call:
+    - off
+
+  # Disallow alert
+  no-alert:
+    - error
+
+  # Disallow Array constructors
+  no-array-constructor:
+    - error
+
+  # Disallow using an async function as a Promise executor
+  no-async-promise-executor:
+    - error
+
+  # Disallow await inside of loops
+  no-await-in-loop:
+    - warn
+
+  # Disallow bitwise operators
+  no-bitwise:
+    - off
+
+  # Disallow use of the Buffer() constructor
+  no-buffer-constructor:
+    - error
+
+  # Disallow Use of caller/callee
+  no-caller:
+    - error
+
+  # Disallow lexical declarations in case/default clauses
+  no-case-declarations:
+    - error
+
+  # Disallow shadowing of variables inside of catch
+  no-catch-shadow:
+    - error
+
+  # Disallow modifying variables of class declarations
+  no-class-assign:
+    - error
+
+  # disallow comparing against -0
+  no-compare-neg-zero:
+    - error
+
+  # Disallow assignment operators in conditional statements
+  no-cond-assign:
+    - error
+
+  # Disallow arrow functions where they could be confused with comparisons
+  no-confusing-arrow:
+    - off
+
+  # Disallow the use of console
+  no-console:
+    - error
+
+  # Disallow modifying variables that are declared using const
+  no-const-assign:
+    - error
+
+  # Disallow constant expressions in conditions
+  no-constant-condition:
+    - error
+
+  # Disallow continue statements
+  no-continue:
+    - off
+
+  # Disallow control characters in regular expressions
+  no-control-regex:
+    - warn
+
+  # Disallow the use of debugger
+  no-debugger:
+    - error
+
+  # Disallow deleting variables
+  no-delete-var:
+    - error
+
+  # Disallow regular expressions that look like division
+  no-div-regex:
+    - off
+
+  # Disallow duplicate arguments in function definitions
+  no-dupe-args:
+    - error
+
+  # Disallow duplicate name in class members
+  no-dupe-class-members:
+    - error
+
+  # Disallow duplicate object keys
+  no-dupe-keys:
+    - error
+
+  # Disallow duplicate case statements
+  no-duplicate-case:
+    - error
+
+  # Disallow duplicate imports (use the eslint import plugin rule)
+  no-duplicate-imports:
+    - off
+
+  # Simplify if-else when possible
+  no-else-return:
+    - error
+
+  # Disallow empty character classes in regular expressions
+  no-empty-character-class:
+    - error
+
+  # Disallow empty functions
+  no-empty-function:
+    - warn
+
+  # Disallow empty destructuring patterns
+  no-empty-pattern:
+    - error
+
+  # Disallow empty block statements
+  no-empty:
+    - warn
+
+  # Disallow null comparisons
+  no-eq-null:
+    - error
+
+  # Disallow reassigning exceptions in catch clauses
+  no-ex-assign:
+    - error
+
+  # Disallow eval
+  no-eval:
+    - error
+
+  # Disallow extending of native objects
+  no-extend-native:
+    - error
+
+  # Avoid unnecessary binds
+  no-extra-bind:
+    - error
+
+  # disallow unnecessary boolean casts
+  no-extra-boolean-cast:
+    - error
+
+  # Disallow unnecessary labels
+  no-extra-label:
+    - error
+
+  # Disallow unnecessary parentheses
+  no-extra-parens:
+    - error
+    - all
+    - ignoreJSX: multi-line
+      nestedBinaryExpressions: true
+
+  # Disallow unnecessary semicolons
+  no-extra-semi:
+    - error
+
+  # Disallow case statement fallthrough
+  no-fallthrough:
+    - error
+
+  # Disallow floating decimals
+  no-floating-decimal:
+    - error
+
+  # Disallow faulty function assignments
+  no-func-assign:
+    - error
+
+  # Disallow assigning to globals
+  no-global-assign:
+    - error
+
+  # Disallow the type conversion with shorter notations
+  no-implicit-coercion:
+    - error
+
+  # Avoid implicit globals
+  no-implicit-globals:
+    - error
+
+  # Avoid implied eval
+  no-implied-eval:
+    - error
+
+  # Disallow inline comments after code
+  no-inline-comments:
+    - off
+
+  # Disallow variable or function declarations in nested blocks
+  no-inner-declarations:
+    - warn
+
+  # Prevent invalid regexes
+  no-invalid-regexp:
+    - error
+
+  # Avoid invalid this references
+  no-invalid-this:
+    - off # see (babel/no-invalid-this)
+
+  # Prevent spacing characters other than space
+  no-irregular-whitespace:
+    - error
+
+  # Disallow iterator
+  no-iterator:
+    - error
+
+  # Disallow labels that are variables names
+  no-label-var:
+    - error
+
+  # Disallow labeled statements
+  no-labels:
+    - warn
+
+  # Disallow unnecessary nested blocks
+  no-lone-blocks:
+    - error
+
+  # Avoid lonely ifs in else blocks
+  no-lonely-if:
+    - error
+
+  # Disallow functions in loops
+  no-loop-func:
+    - warn
+
+  # Disallow magic numbers
+  no-magic-numbers:
+    - off
+
+  # Disallow characters which are made with multiple code points in character class syntax
+  no-misleading-character-class:
+    - error
+
+  # Disallow mixes of different operators
+  no-mixed-operators:
+    - off
+
+  # Disallow require calls to be mixed with regular variable declarations
+  no-mixed-requires:
+    - off
+
+  # Disallow mixed spaces and tabs for indentation
+  no-mixed-spaces-and-tabs:
+    - off
+
+  # Disallow use of chained assignment expressions
+  no-multi-assign:
+    - error
+
+  # Disallow use of multiple spaces
+  no-multi-spaces:
+    - error
+
+  # Disallow multiline strings
+  no-multi-str:
+    - error
+
+  # Disallow multiple empty lines
+  no-multiple-empty-lines:
+    - off
+
+  # Disallow reassignment of native objects
+  no-native-reassign:
+    - error
+
+  # Disallow negated conditions
+  no-negated-condition:
+    - error
+
+  # Prevent !a in b instead of !(a in b) bug
+  no-negated-in-lhs:
+    -  error
+
+  # Disallow nested ternary expressions
+  no-nested-ternary:
+    - off
+
+  # Disallow function constructor
+  no-new-func:
+    - error
+
+  # Disallow Object constructors
+  no-new-object:
+    - error
+
+  # Disallow new require
+  no-new-require:
+    - error
+
+  # Disallow symbol constructor
+  no-new-symbol:
+    - error
+
+  # Avoid creating wrappers for String, Boolean, ...
+  no-new-wrappers:
+    - error
+
+  # Disallow new for side effects
+  no-new:
+    - error
+
+  # Prevent the accidental calling of global objects as functions
+  no-obj-calls:
+    - error
+
+  # Disallow octal escape sequences in string literals
+  no-octal-escape:
+    - error
+
+  # Disallow octal literals
+  no-octal:
+    - error
+
+  # Disallow reassignment of function parameters
+  no-param-reassign:
+    - error
+
+  # Disallow string concatenation when using __dirname and __filename
+  no-path-concat:
+    - error
+
+  # Disallow the unary operators ++ and --
+  no-plusplus:
+    - off
+
+  # Disallow process.env
+  no-process-env:
+    - warn
+
+  # Disallow process.exit()
+  no-process-exit:
+    - error
+
+  # Forbid __proto__
+  no-proto:
+    - error
+
+  # Disallow calling some Object.prototype methods directly on objects
+  no-prototype-builtins:
+    - error
+
+  # Disallow variable redeclaration
+  no-redeclare:
+    - error
+
+  # Disallow multiple spaces in regular expressions
+  no-regex-spaces:
+    - error
+
+  # Disallow specific global variables
+  no-restricted-globals:
+    - off
+
+  # Disallow specific imports
+  no-restricted-imports:
+    - off
+
+  # Disallow Node.js modules
+  no-restricted-modules:
+    - off
+
+  # Disallow certain object properties
+  no-restricted-properties:
+    - off
+
+  # Disallow specified syntax
+  no-restricted-syntax:
+    - off
+
+  # Disallow Assignment in return Statement
+  no-return-assign:
+    - error
+
+  # Disallows unnecessary return await
+  no-return-await:
+    - error
+
+  # Disallow script URLs
+  no-script-url:
+    - error
+
+  # Disallow assignments where both sides are exactly the same
+  no-self-assign:
+    - error
+
+  # Forbid x === x
+  no-self-compare:
+    - error
+
+  # Disallow use of the comma operator
+  no-sequences:
+    - error
+
+  # Disallow shadowing of restricted names
+  no-shadow-restricted-names:
+    - error
+
+  # Disallow variable declarations from shadowing variables declared in the outer scope
+  no-shadow:
+    - warn
+
+  # disallow space between function identifier and application
+  no-spaced-func:
+    - error
+
+  # Disallow [,,]
+  no-sparse-arrays:
+    - error
+
+  # Disallow synchronous methods
+  no-sync:
+    - off
+
+  # Disallow all tabs
+  no-tabs:
+    - off
+
+  # Disallow template literal placeholder syntax in regular strings
+  no-template-curly-in-string:
+    - warn
+
+  # Disallow ternary operators
+  no-ternary:
+    - off
+
+  # Disallow use of this/super before calling super() in constructors
+  no-this-before-super:
+    - error
+
+  # Restrict what can be thrown as an exception
+  no-throw-literal:
+    - error
+
+  # Disallow trailing whitespace at the end of lines
+  no-trailing-spaces:
+    - error
+
+  # Disallow initializing to undefined
+  no-undef-init:
+    - error
+
+  # Disallow undeclared variables
+  no-undef:
+    - error
+
+  # Disallow use of undefined
+  no-undefined:
+    - off
+
+  # Disallow dangling underscores in identifiers
+  no-underscore-dangle:
+    - off
+
+  # Disallow confusing multiline expressions
+  no-unexpected-multiline:
+    - error
+
+  # Disallow unmodified conditions of loops
+  no-unmodified-loop-condition:
+  - error
+
+  # Avoid unnecessary ternaries
+  no-unneeded-ternary:
+    - error
+
+  # Disallow unreachable code
+  no-unreachable:
+    - error
+
+  # Disallow control flow statements in finally blocks
+  no-unsafe-finally:
+    - error
+
+  # Disallow unsafe negations
+  no-unsafe-negation:
+    - error
+
+  # Disallow unused expressions
+  no-unused-expressions:
+    - off # (see babel/no-unused-expressions)
+
+  # Disallow unused labels
+  no-unused-labels:
+    - error
+
+  # Forbid unused variables
+  no-unused-vars:
+    - error
+    - args: none
+      caughtErrors: none
+      ignoreRestSiblings: true
+      varsIgnorePattern: ^_$
+
+
+  # Disallow use of variables before they are defined
+  no-use-before-define:
+    - warn
+    - functions: false
+      variables: false
+
+  # Disallow unnecessary .call() and .apply()
+  no-useless-call:
+    - error
+
+  # Disallow unnecessary catch clauses
+  no-useless-catch:
+    - error
+
+  # Disallow unnecessary computed property keys on objects
+  no-useless-computed-key:
+    - error
+
+  # Avoid useless string concatenation
+  no-useless-concat:
+    - error
+
+
+  # Disallow unnecessary constructor
+  no-useless-constructor:
+    - error
+
+  # Disallow unnecessary escape usage
+  no-useless-escape:
+    - error
+
+  # Disallow renaming import, export, and destructured assignments to the same name
+  no-useless-rename:
+    - error
+
+  # Disallow redundant return statements
+  no-useless-return:
+    - error
+
+  # Disallow var
+  no-var:
+    - error
+
+  # Disallow use of the void operator
+  no-void:
+    - off
+
+  # Disallow warning comments
+  no-warning-comments:
+    - off
+
+  # Disallow whitespace before object properties
+  no-whitespace-before-property:
+    - error
+
+  # Disallow whit blocks
+  no-with:
+    - error
+
+  # Enforce the location of single-line statements
+  nonblock-statement-body-position:
+    - off
+
+  # Consistent object newlines
+  object-curly-newline:
+    - error
+    - multiline: true
+      consistent: true
+
+  # Enforce consistent spacing inside braces (uses babel plugin rule)
+  object-curly-spacing:
+    - off
+
+  # Enforce placing object properties on separate lines
+  object-property-newline:
+    - error
+    - allowAllPropertiesOnSameLine: true
+
+  # doesn't fail when using object spread (...obj)
+  object-shorthand:
+    - error
+
+  # Force var declarations to only have one var
+  one-var:
+    - error
+    - never
+
+  # Allow only one declaration per line
+  one-var-declaration-per-line:
+    - error
+
+  # Force operator shorthands when possible
+  operator-assignment:
+    - error
+    - always
+
+  # Enforce operators to be placed before or after line breaks
+  operator-linebreak:
+    - error
+    - before
+    - overrides:
+       =: after
+
+  # Require or disallow padding within blocks
+  padded-blocks:
+    - off
+
+  # Require or disallow padding lines between statements
+  padding-line-between-statements:
+    - off
+
+  # Require using arrow functions for callbacks
+  prefer-arrow-callback:
+    - off
+
+  # Suggest using const declaration for variables that are never reassigned after declared
+  prefer-const:
+    -  warn
+
+  # Prefer destructuring from arrays and objects
+  prefer-destructuring:
+    - error
+
+  # Disallow parseInt() and Number.parseInt() in favor of binary, octal, and hexadecimal literals
+  prefer-numeric-literals:
+    - off
+
+  # Prefer use of an object spread over Object.assign
+  prefer-object-spread:
+    - warn
+
+  # Require using Error objects as Promise rejection reasons
+  prefer-promise-reject-errors:
+    - error
+
+  # deprecated
+  prefer-reflect:
+    - off
+
+  # Suggest using the rest parameters instead of arguments
+  prefer-rest-params:
+    - error
+
+  # Suggest using the spread operator instead of .apply()
+  prefer-spread:
+    - error
+
+  # Prefer template strings instead of concatenation
+  prefer-template:
+    - warn
+
+  # Require radix parameter
+  radix:
+    - error
+
+  # Disallow assignments that can lead to race conditions due to usage of await or yield
+  require-atomic-updates:
+    - error
+
+  # Disallow async functions which have no await expression
+  require-await:
+    - error
+
+  # Require JSDoc comments
+  require-jsdoc:
+    - off
+
+  # Enforce the use of u flag on RegExp
+  require-unicode-regexp:
+    - off
+
+  # Disallow generator functions that do not have yield
+  require-yield:
+    - error
+
+  # Require quotes around object literal property names
+  quote-props:
+    - error
+    - as-needed
+    - keywords: false
+      unnecessary: false
+
+  # Specify whether backticks, double or single quotes should be used (see babel/quotes)
+  quotes:
+    - off
+
+  # Enforce spacing between rest and spread operators and their expressions
+  rest-spread-spacing:
+    - error
+    - never
+
+  # Require or disallow use of semicolons instead of ASI
+  semi:
+    - off # (see babel/semi)
+
+  # Enforce spacing before and after semicolons
+  semi-spacing:
+    - error
+
+  # Enforce location of semicolons
+  semi-style:
+    - error
+    - first
+
+  # Import sorting
+  sort-imports:
+    - off
+
+  # Require object keys to be sorted
+  sort-keys:
+    - off
+
+  # Variable sorting
+  sort-vars:
+    - off
+
+  # Require or disallow a space before blocks
+  space-before-blocks:
+    - error
+
+  # Require or disallow a space before function opening parenthesis
+  space-before-function-paren:
+    - error
+
+  # Disallow or enforce spaces inside of parentheses
+  space-in-parens:
+    - off
+
+  # Require space between infix ops
+  space-infix-ops:
+    - error
+
+  # Require spacing for infix ops
+  space-unary-ops:
+    - error
+    - nonwords: false
+      words: true
+
+  # Require or disallow a space immediately following the // or /* in a comment
+  spaced-comment:
+    - error
+
+  # Require or disallow strict mode directives
+  strict:
+    - error
+    - never
+
+  # Enforce spacing around colons of switch statements
+  switch-colon-spacing:
+    - error
+    - before: false
+      after: true
+
+  # Require symbol description
+  symbol-description:
+    - error
+
+  # Consistent spacing in template string
+  template-curly-spacing:
+    - error
+
+  # Require or disallow spacing between template tags and their literals
+  template-tag-spacing:
+    - error
+    - never
+
+  # Require or disallow the unicode byte order mark (BOM)
+  unicode-bom:
+    - error
+    - never
+
+  # Never compare to NaN
+  use-isnan:
+    - error
+
+  # Enforce valid JSDoc comments
+  valid-jsdoc:
+    - off
+
+  # Ensure string compared to typeof is valid
+  valid-typeof:
+    - off # (see babel/valid-typeof)
+
+  # Require variable declarations to be at the top of their scope
+  vars-on-top:
+    - off
+
+  # Require IIFEs to be wrapped
+  wrap-iife:
+    - error
+    - inside
+
+  # Require Regex Literals to be Wrapped
+  wrap-regex:
+    - off
+
+  # Enforce spacing around the * in yield* expressions
+  yield-star-spacing:
+    - error
+    - both
+
+  # Require or disallow Yoda Conditions
+  yoda:
+    - off
+
+overrides:
+  - files:
+      - src/lib/client.js
+    env:
+      node: false
+      browser: true
+    globals:
+      global: readonly
+  - files:
+      - example/frame.js
+    env:
+      node: true
+    globals:
+      __dirname: true
+      __filename: true
+  - files:
+      - "*_test.js"
+      - "**/*_test.js"
+      - "test.js"
+    env:
+      jest: true
+
