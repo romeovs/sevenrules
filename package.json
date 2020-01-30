@@ -23,7 +23,8 @@
     "docs": "jsdoc -c .jsdoc.json",
     "lint": "standard --verbose | snazzy",
     "test": "ava --verbose src/**/*_test.js",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublish": "rollup -c"
   },
   "husky": {
     "hooks": {
