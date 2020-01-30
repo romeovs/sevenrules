@@ -63,3 +63,6 @@ yarn.lock
 
 # Generated documentation
 /apidoc
+
+# Build directory
+dist/
