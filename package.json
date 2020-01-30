@@ -1,6 +1,6 @@
 {
 	"name": "@romeovs/sevenrules",
-	"version": "1.4.3",
+	"version": "1.4.4",
 	"description": "Git commit message validator",
 	"homepage": "https://github.com/romeovs/sevenrules",
 	"bugs": "https://github.com/severnway/romeovs/issues",
