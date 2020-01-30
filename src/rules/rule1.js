@@ -1,9 +1,3 @@
-/**
- * @file Validate against rule 1.
- * @module sevenrules/rule1
- */
-
-// Imports
 import { lines as split } from "../lines"
 
 /**
@@ -16,12 +10,17 @@ import { lines as split } from "../lines"
  */
 export function rule1 (message) {
 	const lines = split(message)
+
 	if (lines.length < 2) {
+		// No body given
 		return true
 	}
-	if (lines[1].length > 0) {
+
+	if (lines[1] !== "") {
+		// Second line is not empty
 		return false
 	}
+
 	return true
 }
 

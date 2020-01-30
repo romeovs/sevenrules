@@ -4,6 +4,8 @@
  */
 
 import { exceptions } from "../exceptions"
+import { lines as split } from "../lines"
+import { words } from "../words"
 
 /**
  * Capital letter. Currently naive.
@@ -20,19 +22,26 @@ const capitalLetter = /[A-Z]/
  * @return {boolean} - true if the message satisfies rule 3.
  */
 export function rule3 (message) {
-	const [ first ] = message.split(/\s+/).filter(s => s !== "")
-	if (exceptions.indexOf(first.toLowerCase()) !== -1) {
+	const [ subject ] = split(message)
+	const [ first ] = words(subject)
+	const lower = first.toLowerCase()
+
+	if (exceptions.includes(lower)) {
+		// Ignore special commit messages
 		return true
 	}
 
 	if (message.length === 0) {
+		// Empty messages are forbidden
 		return false
 	}
-	const firstCharacter = message.charAt(0)
-	const match = firstCharacter.match(capitalLetter)
-	if (match === null) {
+
+	const char = message.charAt(0)
+	if (char.match(capitalLetter) === null) {
+		// First character is not capitalised
 		return false
 	}
+
 	return true
 }
 

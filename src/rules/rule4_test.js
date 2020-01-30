@@ -10,5 +10,4 @@ function reject (t, message) {
 }
 
 test("accept unterminated subject", accept, "Subject")
-
 test("reject terminated subject", reject, "Subject.")

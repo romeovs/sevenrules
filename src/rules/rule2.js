@@ -15,9 +15,12 @@ import { lines as split } from "../lines"
  */
 export function rule2 (message) {
 	const [ subject ] = split(message)
+
 	if (subject.length > 72) {
+		// Subject length is too long
 		return false
 	}
+
 	return true
 }
 

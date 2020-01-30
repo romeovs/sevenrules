@@ -15,11 +15,14 @@ import { lines as split } from "../lines"
  */
 export function rule6 (message) {
 	const lines = split(message)
-	for (let i = 2; i < lines.length; i++) {
-		if (lines[i].length > 72) {
+
+	for (const line of lines) {
+		// Check each line
+		if (line.length > 72) {
 			return false
 		}
 	}
+
 	return true
 }
 

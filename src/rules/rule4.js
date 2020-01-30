@@ -22,11 +22,13 @@ const period = /\./
  */
 export function rule4 (message) {
 	const [ subject ] = split(message)
-	const lastCharacter = subject.charAt(subject.length - 1)
-	const match = lastCharacter.match(period)
-	if (match === null) {
+	const last = subject.charAt(subject.length - 1)
+
+	if (last.match(period) === null) {
+		// Last character is not a period
 		return true
 	}
+
 	return false
 }
 
