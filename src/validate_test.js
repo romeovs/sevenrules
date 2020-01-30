@@ -37,26 +37,26 @@ test.serial('rule foo pass reported', function (t) {
   foo.returns(true)
   bar.returns(true)
   const results = validateAll(message, rules)
-  t.true(results.foo)
+  t.is(results.foo, null)
 })
 
 test.serial('rule foo pass reported', function (t) {
   foo.returns(false)
   bar.returns(true)
   const results = validateAll(message, rules)
-  t.false(results.foo)
+  t.truthy(results.foo)
 })
 
 test.serial('rule bar pass reported', function (t) {
   foo.returns(true)
   bar.returns(true)
   const results = validateAll(message, rules)
-  t.true(results.bar)
+  t.is(results.bar, null)
 })
 
 test.serial('rule bar pass reported', function (t) {
   foo.returns(true)
   bar.returns(false)
   const results = validateAll(message, rules)
-  t.false(results.bar)
+  t.truthy(results.bar)
 })

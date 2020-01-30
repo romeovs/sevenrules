@@ -53,7 +53,10 @@ const all = {
 export function validateAll (message, rules = all) {
   const res = {}
   for (const key in rules) {
-    res[key] = rules[key](message)
+    res[key] =
+      rules[key](message)
+        ? null
+        : rules[key].text || `rule ${key} failed`
   }
 
   return res
@@ -63,10 +66,9 @@ export function validateAll (message, rules = all) {
  * Validate a commit message with simple result.
  * @param {string} message - The commit message.
  * @param {rules?} rules - The rules to check.
- * @return {boolean}
- *     Whether the message satisfies all rules.
+ * @return {string | null} - The description of the rule if it violates, null otherwise
  */
 export function validate (message, rules) {
   const results = validateAll(message, rules)
-  return Object.values(results).every(res => res)
+  return !Object.values(results).find(res => res !== null)
 }

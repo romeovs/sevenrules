@@ -16,22 +16,15 @@ if (!messagePath) {
 var message = fs.readFileSync(messagePath, 'utf8')
 
 var results = validateAll(message)
-if (!(
-  results[1] &&
-  results[2] &&
-  results[3] &&
-  results[4] &&
-  results[5] &&
-  results[6]
-)) {
+
+for (const key in results) {
+  if (results[key] === null) {
+    continue
+  }
+
   console.log('Your commit message breaks of the seven rules of commit messages')
   console.log()
-  if (!results[1]) console.log('  Rule 1: ' + rule1.text)
-  if (!results[2]) console.log('  Rule 2: ' + rule2.text)
-  if (!results[3]) console.log('  Rule 3: ' + rule3.text)
-  if (!results[4]) console.log('  Rule 4: ' + rule4.text)
-  if (!results[5]) console.log('  Rule 5: ' + rule5.text)
-  if (!results[6]) console.log('  Rule 6: ' + rule6.text)
+  console.log(`  Rule ${key}: ${results[key]}`)
   console.log()
   console.log('For more info on the seven rules, see https://chris.beams.io/posts/git-commit')
   process.exit(1)
