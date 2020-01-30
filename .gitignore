@@ -59,6 +59,7 @@ typings/
 
 # Lockfile
 package-lock.json
+yarn.lock
 
 # Generated documentation
 /apidoc
