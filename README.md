@@ -28,8 +28,7 @@ Inspired by the [quality Bash implementation](https://gitlab.com/silent.correspo
 Install `husky` and `sevenrules`:
 
 ```sh
-npm install husky --save-dev
-npm install sevenrules --save-dev
+npm install husky @romeovs/sevenrules --save-dev
 ```
 
 Hook the validator to `commit-msg` in your `package.json`:
