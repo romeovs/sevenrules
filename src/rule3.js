@@ -9,9 +9,6 @@
  */
 var capitalLetter = /[A-Z]/
 
-/** Text of the rule. */
-export const text = 'Capitalize the subject line'
-
 /**
  * Validate a commit message against rule 3.
  *
@@ -27,3 +24,6 @@ export function rule3 (message) {
   if (match === null) return false
   return true
 }
+
+/** Text of the rule. */
+rule3.text = 'Capitalize the subject line'

@@ -5,9 +5,6 @@
 
 import { lines as split } from './lines'
 
-/** Text of the rule. */
-export const text = 'Limit the subject line to 72 characters'
-
 /**
  * Validate a commit message against rule 2.
  *
@@ -22,3 +19,6 @@ export function rule2 (message) {
   if (subject.length > 72) return false
   return true
 }
+
+/** Text of the rule. */
+rule2.text = 'Limit the subject line to 72 characters'

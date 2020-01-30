@@ -5,9 +5,6 @@
 
 import { lines as split } from './lines'
 
-/** The text of the rule. */
-export const text = 'Wrap the body at 72 characters'
-
 /**
  * Validate a commit message against rule 6.
  *
@@ -23,3 +20,6 @@ export function rule6 (message) {
   }
   return true
 }
+
+/** The text of the rule. */
+rule6.text = 'Wrap the body at 72 characters'

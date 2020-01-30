@@ -6,9 +6,6 @@
 // Imports
 import { lines as split } from './lines'
 
-/** Text of the rule. */
-export const text = 'Separate subject from body with a blank line'
-
 /**
  * Validate a commit message against rule 1.
  *
@@ -23,3 +20,6 @@ export function rule1 (message) {
   if (lines[1].length > 0) return false
   return true
 }
+
+/** Text of the rule. */
+rule1.text = 'Separate subject from body with a blank line'

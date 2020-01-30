@@ -6,9 +6,6 @@
 import { lines as split } from './lines'
 import { blacklist } from './blacklist'
 
-/** Text of the rule. */
-export const text = 'Use the imperative mood in the subject line'
-
 
 /**
  * Validate a commit message against rule 5.
@@ -28,3 +25,6 @@ export function rule5 (message) {
 
   return true
 }
+
+/** Text of the rule. */
+rule5.text = 'Use the imperative mood in the subject line'

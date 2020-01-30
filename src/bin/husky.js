@@ -5,11 +5,8 @@
  * @module sevenruleshusky
  */
 
-'use strict'
-
-// Imports
 import fs from 'fs'
-import { validateAll } from '../validateAll'
+import { validateAll, rule1, rule2, rule3, rule4, rule5, rule6 } from '../index'
 
 var messagePath = process.env['GIT_PARAMS'] || process.env['HUSKY_GIT_PARAMS']
 if (!messagePath) {
@@ -29,12 +26,12 @@ if (!(
 )) {
   console.log('Your commit message breaks of the seven rules of commit messages')
   console.log()
-  if (!results[1]) console.log('  Rule 1: ' + sevenrules.rule1.rule)
-  if (!results[2]) console.log('  Rule 2: ' + sevenrules.rule2.rule)
-  if (!results[3]) console.log('  Rule 3: ' + sevenrules.rule3.rule)
-  if (!results[4]) console.log('  Rule 4: ' + sevenrules.rule4.rule)
-  if (!results[5]) console.log('  Rule 5: ' + sevenrules.rule5.rule)
-  if (!results[6]) console.log('  Rule 6: ' + sevenrules.rule6.rule)
+  if (!results[1]) console.log('  Rule 1: ' + rule1.text)
+  if (!results[2]) console.log('  Rule 2: ' + rule2.text)
+  if (!results[3]) console.log('  Rule 3: ' + rule3.text)
+  if (!results[4]) console.log('  Rule 4: ' + rule4.text)
+  if (!results[5]) console.log('  Rule 5: ' + rule5.text)
+  if (!results[6]) console.log('  Rule 6: ' + rule6.text)
   console.log()
   console.log('For more info on the seven rules, see https://chris.beams.io/posts/git-commit')
   process.exit(1)

@@ -12,9 +12,6 @@ import { lines as split } from './lines'
  */
 var period = /\./
 
-/** The text of the rule. */
-export const text = 'Do not end the subject line with a period'
-
 /**
  * Validate a commit message against rule 4.
  *
@@ -31,3 +28,6 @@ export function rule4 (message) {
   if (match === null) return true
   return false
 }
+
+/** The text of the rule. */
+rule4.text = 'Do not end the subject line with a period'
