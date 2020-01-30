@@ -29,6 +29,8 @@ Install `husky` and `sevenrules`:
 
 ```sh
 npm install husky @romeovs/sevenrules --save-dev
+# or
+yarn add husky @romeovs/sevenrules --dev
 ```
 
 Hook the validator to `commit-msg` in your `package.json`:
