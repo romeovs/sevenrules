@@ -32,12 +32,14 @@ npm install husky --save-dev
 npm install sevenrules --save-dev
 ```
 
-Hook the validator to `commitmsg` in your `package.json`:
+Hook the validator to `commit-msg` in your `package.json`:
 
 ```JSON
 {
-  "scripts": {
-    "commitmsg": "sevenruleshusky"
+  "husky": {
+    "hooks": {
+      "commit-msg": "sevenruleshusky"
+    }
   }
 }
 ```
