@@ -2,6 +2,11 @@ import path from "path"
 
 import hashbang from "rollup-plugin-hashbang"
 
+const external = [
+  'fs',
+  'path',
+]
+
 export default [
   {
     input: path.resolve("./src/index.js"),
@@ -9,6 +14,7 @@ export default [
       file: path.resolve("./dist/lib.js"),
       format: "cjs",
     },
+    external,
   },
   {
     input: path.resolve("./bin/husky.js"),
@@ -19,5 +25,6 @@ export default [
     plugins: [
       hashbang(),
     ],
+    external,
   },
 ]
