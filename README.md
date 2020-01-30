@@ -47,6 +47,18 @@ Hook the validator to `commit-msg` in your `package.json`:
 
 Enjoy your clean commit log!
 
+## Example
+
+```sh
+$ git commit -m "Updated README.md"
+Your commit message breaks of the seven rules of commit messages
+
+  Rule 5: Use the imperative mood in the subject line
+
+For more info on the seven rules, see https://chris.beams.io/posts/git-commit
+commit-msg hook failed (add --no-verify to bypass)
+```
+
 ## Conduct
 
 Respect agency. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
