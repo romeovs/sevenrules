@@ -10,5 +10,6 @@ function reject (t, message) {
 }
 
 test('accept capitalized subject', accept, 'Subject')
-
 test('reject uncapitalized subject', reject, 'subject')
+test('accept fixup commit', accept, 'fixup! Subject')
+test('accept merge commit', accept, 'Merge foo')

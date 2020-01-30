@@ -11,3 +11,4 @@ function reject (t, message) {
 
 test('accept valid imperative tone', accept, 'Add test for foo')
 test('reject invalid imperative tone', reject, 'Added test for foo')
+test('accept fixup commit', accept, 'fixup! Subject')

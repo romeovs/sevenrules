@@ -5,7 +5,7 @@
 
 import { lines as split } from '../lines'
 import { blacklist } from '../blacklist'
-
+import { exceptions } from '../exceptions'
 
 /**
  * Validate a commit message against rule 5.
@@ -18,6 +18,10 @@ import { blacklist } from '../blacklist'
 export function rule5 (message) {
   var line = split(message)[0]
   var first = line.split(/\s+/).filter(s => s !== '')[0]
+
+  if (exceptions.indexOf(first.toLowerCase()) !== -1) {
+    return true
+  }
 
   if (blacklist.indexOf(first.toLowerCase()) !== -1) {
     return false
