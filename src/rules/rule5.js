@@ -3,9 +3,9 @@
  * @module sevenrules/rule5
  */
 
-import { lines as split } from '../lines'
-import { blacklist } from '../blacklist'
-import { exceptions } from '../exceptions'
+import { lines as split } from "../lines"
+import { blacklist } from "../blacklist"
+import { exceptions } from "../exceptions"
 
 /**
  * Validate a commit message against rule 5.
@@ -16,19 +16,19 @@ import { exceptions } from '../exceptions'
  * @return {boolean} - true if the message satisfies rule 5.
  */
 export function rule5 (message) {
-  var line = split(message)[0]
-  var first = line.split(/\s+/).filter(s => s !== '')[0]
+	const [ subject ] = split(message)
+	const [ first ] = subject.split(/\s+/).filter(s => s !== "")
 
-  if (exceptions.indexOf(first.toLowerCase()) !== -1) {
-    return true
-  }
+	if (exceptions.indexOf(first.toLowerCase()) !== -1) {
+		return true
+	}
 
-  if (blacklist.indexOf(first.toLowerCase()) !== -1) {
-    return false
-  }
+	if (blacklist.indexOf(first.toLowerCase()) !== -1) {
+		return false
+	}
 
-  return true
+	return true
 }
 
 /** Text of the rule. */
-rule5.text = 'Use the imperative mood in the subject line'
+rule5.text = "Use the imperative mood in the subject line"

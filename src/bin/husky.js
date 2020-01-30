@@ -1,31 +1,32 @@
 #!/usr/bin/env node
+/* eslint-disable no-process-env, no-process-exit, no-console */
 
 /**
  * @file Husky hook to validate with sevenrules.
  * @module sevenruleshusky
  */
 
-import fs from 'fs'
-import { validateAll, rule1, rule2, rule3, rule4, rule5, rule6 } from '../index'
+import fs from "fs"
+import { validateAll } from "../index"
 
-var messagePath = process.env['GIT_PARAMS'] || process.env['HUSKY_GIT_PARAMS']
+const messagePath = process.env.GIT_PARAMS || process.env.HUSKY_GIT_PARAMS
 if (!messagePath) {
-  throw new Error('Must be run as a husky commit-msg hook')
+	throw new Error("Must be run as a husky commit-msg hook")
 }
 
-var message = fs.readFileSync(messagePath, 'utf8')
+const message = fs.readFileSync(messagePath, "utf8")
 
-var results = validateAll(message)
+const results = validateAll(message)
 
 for (const key in results) {
-  if (results[key] === null) {
-    continue
-  }
+	if (results[key] === null) {
+		continue
+	}
 
-  console.log('Your commit message breaks of the seven rules of commit messages')
-  console.log()
-  console.log(`  Rule ${key}: ${results[key]}`)
-  console.log()
-  console.log('For more info on the seven rules, see https://chris.beams.io/posts/git-commit')
-  process.exit(1)
+	console.log("Your commit message breaks of the seven rules of commit messages")
+	console.log()
+	console.log(`  Rule ${key}: ${results[key]}`)
+	console.log()
+	console.log("For more info on the seven rules, see https://chris.beams.io/posts/git-commit")
+	process.exit(1)
 }

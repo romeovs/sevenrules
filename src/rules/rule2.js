@@ -3,7 +3,7 @@
  * @module sevenrules/rule2
  */
 
-import { lines as split } from '../lines'
+import { lines as split } from "../lines"
 
 /**
  * Validate a commit message against rule 2.
@@ -14,11 +14,12 @@ import { lines as split } from '../lines'
  * @return {boolean} - true if the message satisfies rule 2.
  */
 export function rule2 (message) {
-  var lines = split(message)
-  var subject = lines[0]
-  if (subject.length > 72) return false
-  return true
+	const [ subject ] = split(message)
+	if (subject.length > 72) {
+		return false
+	}
+	return true
 }
 
 /** Text of the rule. */
-rule2.text = 'Limit the subject line to 72 characters'
+rule2.text = "Limit the subject line to 72 characters"

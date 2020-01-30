@@ -3,7 +3,7 @@
  * @module sevenrules/rule6
  */
 
-import { lines as split } from '../lines'
+import { lines as split } from "../lines"
 
 /**
  * Validate a commit message against rule 6.
@@ -14,12 +14,14 @@ import { lines as split } from '../lines'
  * @return {boolean} - true if message satisfies rule 6.
  */
 export function rule6 (message) {
-  var lines = split(message)
-  for (var i = 2; i < lines.length; i++) {
-    if (lines[i].length > 72) return false
-  }
-  return true
+	const lines = split(message)
+	for (let i = 2; i < lines.length; i++) {
+		if (lines[i].length > 72) {
+			return false
+		}
+	}
+	return true
 }
 
 /** The text of the rule. */
-rule6.text = 'Wrap the body at 72 characters'
+rule6.text = "Wrap the body at 72 characters"

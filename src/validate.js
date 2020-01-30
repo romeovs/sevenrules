@@ -3,12 +3,12 @@
  * @module sevenrules/validate
  */
 
-import { rule1 } from './rules/rule1'
-import { rule2 } from './rules/rule2'
-import { rule3 } from './rules/rule3'
-import { rule4 } from './rules/rule4'
-import { rule5 } from './rules/rule5'
-import { rule6 } from './rules/rule6'
+import { rule1 } from "./rules/rule1"
+import { rule2 } from "./rules/rule2"
+import { rule3 } from "./rules/rule3"
+import { rule4 } from "./rules/rule4"
+import { rule5 } from "./rules/rule5"
+import { rule6 } from "./rules/rule6"
 
 /**
  * Validation results.
@@ -36,12 +36,12 @@ import { rule6 } from './rules/rule6'
  * All rules.
  */
 const all = {
-  1: rule1,
-  2: rule2,
-  3: rule3,
-  4: rule4,
-  5: rule5,
-  6: rule6,
+	1: rule1,
+	2: rule2,
+	3: rule3,
+	4: rule4,
+	5: rule5,
+	6: rule6,
 }
 
 /**
@@ -51,15 +51,15 @@ const all = {
  * @return {results} - Validation results for all rules.
  */
 export function validateAll (message, rules = all) {
-  const res = {}
-  for (const key in rules) {
-    res[key] =
+	const res = {}
+	for (const key in rules) {
+		res[key] =
       rules[key](message)
-        ? null
-        : rules[key].text || `rule ${key} failed`
-  }
+      	? null
+      	: rules[key].text || `rule ${key} failed`
+	}
 
-  return res
+	return res
 }
 
 /**
@@ -69,6 +69,6 @@ export function validateAll (message, rules = all) {
  * @return {string | null} - The description of the rule if it violates, null otherwise
  */
 export function validate (message, rules) {
-  const results = validateAll(message, rules)
-  return !Object.values(results).find(res => res !== null)
+	const results = validateAll(message, rules)
+	return !Object.values(results).find(res => res !== null)
 }
