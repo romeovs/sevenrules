@@ -17,7 +17,7 @@ export default [
     external,
   },
   {
-    input: path.resolve("./bin/husky.js"),
+    input: path.resolve("./src/bin/husky.js"),
     output: {
       file: path.resolve("./dist/husky.js"),
       format: "cjs",

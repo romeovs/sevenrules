@@ -9,7 +9,7 @@
 
 // Imports
 import fs from 'fs'
-import { validateAll } from '../src/validateAll'
+import { validateAll } from '../validateAll'
 
 var messagePath = process.env['GIT_PARAMS'] || process.env['HUSKY_GIT_PARAMS']
 if (!messagePath) {
