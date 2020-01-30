@@ -22,6 +22,7 @@ if (!(
   results[2] &&
   results[3] &&
   results[4] &&
+  results[5] &&
   results[6]
 )) {
   console.log('Valorous magus, thy commit message hast some problems.')
@@ -30,6 +31,7 @@ if (!(
   if (!results[2]) console.log('  ' + sevenrules.rule2.rule)
   if (!results[3]) console.log('  ' + sevenrules.rule3.rule)
   if (!results[4]) console.log('  ' + sevenrules.rule4.rule)
+  if (!results[5]) console.log('  ' + sevenrules.rule5.rule)
   if (!results[6]) console.log('  ' + sevenrules.rule6.rule)
   process.exit(1)
 }
