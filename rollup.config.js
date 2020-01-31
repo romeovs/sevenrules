@@ -17,9 +17,9 @@ export default [
 		external,
 	},
 	{
-		input: path.resolve("./src/bin/husky.js"),
+		input: path.resolve("./src/bin/sevenrules.js"),
 		output: {
-			file: path.resolve("./dist/husky.js"),
+			file: path.resolve("./dist/sevenrules.js"),
 			format: "cjs",
 		},
 		plugins: [
