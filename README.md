@@ -25,6 +25,7 @@ Inspired by the [quality Bash implementation](https://gitlab.com/silent.correspo
 
 ## Usage
 
+#### Installation through [`husky`](https://github.com/typicode/husky)
 Install `husky` and `sevenrules`:
 
 ```sh
@@ -43,6 +44,23 @@ Hook the validator to `commit-msg` in your `package.json`:
     }
   }
 }
+```
+
+Enjoy your clean commit log!
+
+#### Manual installation
+
+```sh
+npm install --global husky @romeovs/sevenrules
+# or
+yarn global add  husky @romeovs/sevenrules
+```
+
+In the git repository you want to use `sevenrules`, add it to your `commit-msg`
+hook manually:
+```sh
+echo 'sevenrules "$@"' >> .git/hooks/commit-msg
+chmod u+x .git/hooks/commit-msg
 ```
 
 Enjoy your clean commit log!
