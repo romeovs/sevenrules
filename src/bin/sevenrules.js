@@ -9,13 +9,13 @@
 import fs from "fs"
 import { validateAll } from "../index"
 
-const messagePath = process.env.GIT_PARAMS || process.env.HUSKY_GIT_PARAMS
-if (!messagePath) {
-	throw new Error("Must be run as a husky commit-msg hook")
+const filename = process.env.GIT_PARAMS || process.env.HUSKY_GIT_PARAMS || process.argv[2]
+
+if (!filename) {
+	throw new Error("Must be run as a git or husky commit-msg hook")
 }
 
-const message = fs.readFileSync(messagePath, "utf8")
-
+const message = fs.readFileSync(filename, "utf8")
 const results = validateAll(message)
 
 for (const key in results) {
