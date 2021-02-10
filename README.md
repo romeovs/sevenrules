@@ -69,7 +69,7 @@ Enjoy your clean commit log!
 
 ```sh
 $ git commit -m "Updated README.md"
-Your commit message breaks of the seven rules of commit messages
+Your commit message breaks one of the seven rules of commit messages
 
   Rule 5: Use the imperative mood in the subject line
 

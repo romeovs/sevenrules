@@ -23,7 +23,7 @@ for (const key in results) {
 		continue
 	}
 
-	console.log("Your commit message breaks of the seven rules of commit messages")
+	console.log("Your commit message breaks one of the seven rules of commit messages")
 	console.log()
 	console.log(`  Rule ${key}: ${results[key]}`)
 	console.log()
