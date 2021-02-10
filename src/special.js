@@ -6,8 +6,8 @@ const matchers = {
 		return message.trim().match(/^v\d+\.\d+\.\d+$/)
 	},
 	merge (message) {
-		return message.startsWith('Merge branch')
-	}
+		return message.startsWith("Merge branch")
+	},
 }
 
 export function special (message) {
